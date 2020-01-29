@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fox.Microservices.Customers</name>
+    </assembly>
+    <members>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Get(System.String)">
+            <summary>
+            Given a Customer ID return full customer details + addresses
+            </summary>
+            <param name="id">The customer ID</param>
+            <returns>Customer details</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.ConvertFromLead(System.String)">
+            <summary>
+            Convert a lead to a customer
+            </summary>
+            <param name="xid">The customer ID</param>
+            <returns>Customer's addresses</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Addresses(System.String)">
+            <summary>
+            Given a customer ID returns all customer's addresses
+            </summary>
+            <param name="id">The customer ID</param>
+            <returns>Customer's addresses</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.AttachmentPost(Fox.Microservices.Customers.Models.Attachment)">
+            <summary>
+            Insert a new attachment
+            </summary>
+            <param name="value">Attachment data</param>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Vouchers(System.String)">
+            <summary>
+            Given a customer ID returns all customer's vouchers
+            </summary>
+            <param name="id">The customer ID</param>
+            <returns>Customer's vouchers</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.ByFirstameLastnameBirthdate(System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Search for customers by <paramref name="Firstname"/>, <paramref name="Lastname"/> and <paramref name="Birthdate"/>
+            At least one parameter is needed
+            </summary>
+            <param name="Firstname">Customer's firstname (start with search performed)</param>
+            <param name="Lastname">Customer's lastname (start with search performed)</param>
+            <param name="Birthdate">Customer's birthdate (exact match search performed)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Search(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Search for customers 
+            </summary>
+            <param name="lastname">Customers' lastname (start with match)</param>
+            <param name="customerCode">Customer's code (exact match)</param>
+            <param name="voucherID">Customer's voucher ID (exact match)</param>
+            <param name="phoneNumber">Customers' phone number (exact match)</param>
+            <param name="birthdate">Customers' birthdate</param>
+            <param name="pageSize">Specify how many items should be returnerd (pagination)</param>
+            <param name="pageNumber">Specify what page should be returned (pagination, 0 based)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.SearchCustomersAndLeads(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.String,System.Nullable{System.Boolean},System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Search for customers and leads
+            </summary>
+            <param name="lastname">Customer's/Lead's lastname</param>
+            <param name="customerCode">Customer's/Lead's code</param>
+            <param name="voucherID">Customer's/Lead's voucher</param>
+            <param name="phoneNumber">Customer's/Lead's phone number</param>
+            <param name="birthdate">Customer's/Lead's birthday</param>
+            <param name="shopCode">Customer's/Lead's shopcode</param>
+            <param name="IsLead">Filter between customers (false), leads (true) and both(not set)</param>
+            <param name="pageSize">Page size</param>
+            <param name="pageNumber">Page number</param>
+            <param name="SortAscending">Sorted by lastname, firstname ascending(true , default) or descending</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.ByPhoneNumber(System.String)">
+            <summary>
+            Search for customers with the given phone number
+            </summary>
+            <param name="PhoneNumber">Customer's phone number (exact match search performed)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Audiograms(System.String)">
+            <summary>
+            Given a customer ID returns all customer's audiograms
+            </summary>
+            <param name="id">The customer ID</param>
+            <returns>Customer's audiograms</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Audiogram(System.String,System.DateTime)">
+            <summary>
+            Get audiograms for a specific customer and activity date
+            </summary>
+            <param name="id">Customer ID</param>
+            <param name="ActivityDate">Activity Date</param>
+            <returns>Audiograms data</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Attachments(System.String,System.String)">
+            <summary>
+            Get Attachments list for a specific customer filtered by attachment type code (optional)
+            </summary>
+            <param name="id">Customer Code</param>
+            <param name="attachmentTypeCode">Attachment Type Code (optional)</param>
+            <returns>Attachment data</returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Attachments(System.String,System.Guid)">
+            <summary>
+            Get full attachment data
+            </summary>
+            <param name="id">Customer Code</param>
+            <param name="rowGuid">Attachment RowGuid</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fox.Microservices.Customers.Controllers.CustomersController.Notes(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retrieve customer's notes
+            </summary>
+            <param name="id">Customer code</param>
+            <param name="pageSize">Requested page size</param>
+            <param name="pageNumber">Requested page index (Zero-based)</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
